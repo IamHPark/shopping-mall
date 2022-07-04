@@ -1,0 +1,17 @@
+
+.nav-bar {
+  font-size: 1.1rem;
+}
+
+.main-bg {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('./img/main-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.products {
+  width: 25vw;
+}
