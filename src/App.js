@@ -1,43 +1,38 @@
 import './App.css';
-import { Navbar, Nav, Container, Row } from 'react-bootstrap';
+import { Routes, Route, Outlet } from 'react-router-dom'
+import NavBar from './components/Nav';
+import Detail from './pages/Detail';
+import Main from './components/Main';
+import data from './data'
 import { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom'
-import data from './data';
-import Card from './Card';
-import NavBar from './Nav';
-import Detail from './Detail';
+// import Event from './components/Event';
 
 function App() {
   const [products, setProducts] = useState(data);
-  const cards = products.map(product => {
-    <Card
-    id={product.id}
-    title={product.title}
-    price={product.price}
-    content={product.content}
-    />
-  })
+  console.log(products);
 
   return (
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={
-          <>
-            <div className='main-bg'></div>
-            <Container>
-              <Row>
-                {products.map((product, i) =>
-                  <Card key={i} product={product} />
-                )}
-              </Row>
-            </Container>
-          </>
-        } />
-        <Route path="/detail" element={<Detail />}/>
+        <Route path="/" element={<Main products={products}/>} />
+        <Route path="/detail/:id" element={<Detail products={products}/>}/>
+        <Route path="/event" element={<Event/>}>
+          <Route path='one' element={<h3>This is Event One</h3>}/>
+          <Route path='two' element={<h3>This is Event Two</h3>}/>
+        </Route>
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+function Event() {
+  return (
+      <div>
+          <h1>EVENT PAGE</h1>
+          <Outlet></Outlet>
+      </div>
+  )
+}
