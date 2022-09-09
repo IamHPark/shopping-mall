@@ -10,7 +10,7 @@ export default function NavBar() {
         <Navbar.Brand href="#home" className=''>Shoes Market</Navbar.Brand>
         <Nav className="me-auto">
             <Link to ="/" className="nav-link">Home</Link>
-            <Link to ="/detail" className="nav-link">Products</Link>
+            <Link to ="/products" className="nav-link">Products</Link>
         </Nav>
         </Container>
     </Navbar>

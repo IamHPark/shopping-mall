@@ -1,6 +1,14 @@
 
 .nav-bar {
   font-size: 1.1rem;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-bg {
@@ -12,6 +20,23 @@
   background-position: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .main-bg {
+    height: 30vh;
+  }
+}
+
 .products {
-  width: 25vw;
+  width: 100%;
+}
+
+.main-btn {
+  margin-top: 5%;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  background-color: #555555;
+  color: white;
+
 }
