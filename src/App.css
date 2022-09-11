@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.App {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,12 +31,12 @@
 }
 
 .main-btn {
-  margin-top: 5%;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.3rem;
-  background-color: #555555;
-  color: white;
+    margin-top: 5%;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #9f9e9e;
+    color: white;
 
 }

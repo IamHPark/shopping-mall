@@ -11,8 +11,9 @@ import axios from 'axios';
 
 function App() {
   const [products, setProducts] = useState(data);
+  const [show, setShow] = useState(true);
 
-  const getData = () => {
+  const handleClick = () => {
     if(products.length === 3) {
       axios.get('https://codingapple1.github.io/shop/data2.json')
       .then(res => {
@@ -20,6 +21,7 @@ function App() {
         setProducts([...copy, ...res.data])
 
       })
+      setShow(false)
     }
 }
 
@@ -28,7 +30,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Main products={products} setProducts={setProducts}/>} />
+        <Route path="/" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/products" element={<Main products={products}/>} />
         <Route path="/detail/:id" element={<Detail products={products}/>}/>
         {/* <Route path="/event" element={<Event/>}> */}
@@ -36,18 +38,9 @@ function App() {
           {/* <Route path='two' element={<h3>This is Event Two</h3>}/> */}
         {/* </Route> */}
       </Routes>
-      <button className="main-btn" onClick={getData}>More Products</button>
     </div>
   );
 }
 
 export default App;
 
-function Event() {
-  return (
-      <div>
-          <h1>EVENT PAGE</h1>
-          <Outlet></Outlet>
-      </div>
-  )
-}
