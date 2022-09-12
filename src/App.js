@@ -6,6 +6,7 @@ import Main from './components/Main';
 import data from './data'
 import { useState } from 'react';
 import axios from 'axios';
+import Cart from './pages/Cart';
 
 // import Event from './components/Event';
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/products" element={<Main products={products}/>} />
         <Route path="/detail/:id" element={<Detail products={products}/>}/>
+        <Route path="/cart" element={<Cart />} />
         {/* <Route path="/event" element={<Event/>}> */}
           {/* <Route path='one' element={<h3>This is Event One</h3>}/> */}
           {/* <Route path='two' element={<h3>This is Event Two</h3>}/> */}
