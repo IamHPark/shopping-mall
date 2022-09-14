@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "//iamhpark.github.io/shopping-mall/static/css/main.415b11b2.css",
-    "main.js": "//iamhpark.github.io/shopping-mall/static/js/main.6c5588b5.js",
-    "static/media/main-bg.png": "//iamhpark.github.io/shopping-mall/static/media/main-bg.616f307c169b743ff920.png",
-    "index.html": "//iamhpark.github.io/shopping-mall/index.html",
-    "main.415b11b2.css.map": "//iamhpark.github.io/shopping-mall/static/css/main.415b11b2.css.map",
-    "main.6c5588b5.js.map": "//iamhpark.github.io/shopping-mall/static/js/main.6c5588b5.js.map"
+    "main.css": "/shopping-mall/static/css/main.93df0184.css",
+    "main.js": "/shopping-mall/static/js/main.225eb593.js",
+    "static/media/main-bg.png": "/shopping-mall/static/media/main-bg.616f307c169b743ff920.png",
+    "index.html": "/shopping-mall/index.html",
+    "main.93df0184.css.map": "/shopping-mall/static/css/main.93df0184.css.map",
+    "main.225eb593.js.map": "/shopping-mall/static/js/main.225eb593.js.map"
   },
   "entrypoints": [
-    "static/css/main.415b11b2.css",
-    "static/js/main.6c5588b5.js"
+    "static/css/main.93df0184.css",
+    "static/js/main.225eb593.js"
   ]
 }
