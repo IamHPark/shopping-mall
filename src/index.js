@@ -11,8 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <BrowserRouter basename='/shopping-mall/'> */}
-      <BrowserRouter>
+      <BrowserRouter basename='/shopping-mall/'>
         <App />
       </BrowserRouter>
     </Provider>
