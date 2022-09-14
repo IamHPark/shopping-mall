@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/Nav';
 import Detail from './pages/Detail';
 import Main from './components/Main';
@@ -32,7 +32,7 @@ console.log(show)
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Main products={products} handleClick={handleClick} show={show}/>} />
+        <Route path="/products" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/products" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/detail/:id" element={<Detail products={products}/>}/>
         <Route path="/cart" element={<Cart />} />
