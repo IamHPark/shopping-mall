@@ -1,4 +1,6 @@
 
+
+
 .nav-bar {
   font-size: 1.1rem;
   width: 100%;
@@ -9,12 +11,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10vh;
 }
 
 .main-bg {
   width: 100vw;
   height: 50vh;
-  background-image: url('./img/main-bg.png');
+  background-image: url('/public/img/main-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,12 +29,15 @@
   }
 }
 
+.products-container {
+  margin-top: 5vh;
+}
+
 .products {
   width: 100%;
 }
 
 .main-btn {
-    margin-top: 5%;
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 10px;

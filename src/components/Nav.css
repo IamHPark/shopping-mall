@@ -1,3 +1,17 @@
-.nav-link {
+.navbar {
+    padding-left: 5vw;
+    background-color: #555555;
+    color: white;
+}
+.logo {
+    width: 10vw;
+    max-width: 70px;
+}
 
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    font-size: 2rem;
 }

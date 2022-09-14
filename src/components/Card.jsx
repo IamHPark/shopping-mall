@@ -12,11 +12,13 @@ export default function Card (props) {
     }
 
     return (
-        <Col className="product" lg={4} md={6} onClick={() => handleClick(props.product.id)}>
-            <img src={process.env.PUBLIC_URL+`/shoes${props.product.id}.jpeg`} className="products"/>
-            <h2>{props.product.title}</h2>
-            <h4>{props.product.price}</h4>
-            <p>{props.product.content}</p>
+        <Col className="product" lg={4} xs={6} onClick={() => handleClick(props.product.id)}>
+            <div className="product-img">
+                <img src={process.env.PUBLIC_URL+`/img/shoes${props.product.id}.jpg`} className="products"/>
+            </div>
+            <h3>{props.product.title}</h3>
+            <h6>CAD ${props.product.price}</h6>
+            <h6>{props.product.content}</h6>
         </Col>
     )
 };

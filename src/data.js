@@ -1,23 +1,23 @@
 const data = [
     {
       id : 0,
-      title : "White and Black",
-      content : "Born in France",
-      price : 120000
+      title : "Slip-on",
+      content : "Colorful unisex daily slip-on",
+      price : 83
     },
 
     {
       id : 1,
-      title : "Red Knit",
-      content : "Born in Seoul",
-      price : 110000
+      title : "Running",
+      content : "Athletic running shoes, completely comfortable in sporty blue color",
+      price : 150
     },
 
     {
       id : 2,
-      title : "Grey Yordan",
-      content : "Born in the States",
-      price : 130000
+      title : "White Sneakers",
+      content : "Pure white basic sneakers for school shoes",
+      price : 55
     }
   ];
 

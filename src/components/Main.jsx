@@ -1,15 +1,17 @@
 import React from "react";
 import Card from './Card';
 import { Row, Container } from "react-bootstrap";
-import axios from "axios";
 
 
 export default function Main(props) {
 
+    console.log(props.product)
+    console.log(props.show)
+
     return (
         <div className="main">
             <div className='main-bg'></div>
-            <Container>
+            <Container className="products-container">
                 <Row>
                     {props.products.map((product, i) =>
                     <Card key={i} product={product} />

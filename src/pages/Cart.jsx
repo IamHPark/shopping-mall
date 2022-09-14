@@ -1,14 +1,19 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import './Cart.css'
+import { increase, decrease } from "../store/cartSlice.js";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
 
-    const stock = useSelector( state => state.stock)
-    console.log(stock)
+    const cart = useSelector( state => state.cart)
+    console.log('cart', cart)
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return (
+        <div className="cart-container">
         <Container>
             <Table striped bordered hover className="cart" >
             <thead>
@@ -20,16 +25,33 @@ export default function Cart() {
             </tr>
             </thead>
             <tbody>
-                {stock.map((item, i) =>
-                    <tr>
-                        <td>{i+1}</td>
+                {cart.map((item, i) =>
+                    <tr key={i}>
+                        <td>{i + 1}</td>
                         <td>{item.name}</td>
                         <td>{item.count}</td>
-                        <td><button>+</button></td>
+                        <td>
+                            <button className="quantity" onClick={() => {
+                                dispatch(increase(item.id))
+                            }}>
+                            +
+                            </button>
+                            <button className="quantity" onClick={() => {
+                                dispatch(decrease(item.id))
+                            }}>
+                            -
+                            </button>
+                        </td>
                     </tr>
                 )}
             </tbody>
         </Table>
       </Container>
+      <div>
+        <button className="cart-btn" onClick={() => {navigate('/products')}}>BACK</button>
+        <button className="cart-btn">CHECK OUT</button>
+        </div>
+        </div>
+
     )
 }

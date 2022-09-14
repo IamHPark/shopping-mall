@@ -1,15 +1,8 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
-
-const stock = createSlice({
-    name: 'stock',
-    initialState: [
-        {id : 0, name : 'White and Black', count : 2},
-        {id : 2, name : 'Grey Yordan', count : 1}
-      ]
-})
+import { configureStore } from "@reduxjs/toolkit";
+import cart from './store/cartSlice.js'
 
 export default configureStore({
     reducer: {
-        stock: stock.reducer
+        cart: cart.reducer
     }
 })

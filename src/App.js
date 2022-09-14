@@ -16,7 +16,7 @@ function App() {
 
   const handleClick = () => {
     if(products.length === 3) {
-      axios.get('https://codingapple1.github.io/shop/data2.json')
+      axios.get('https://iamhpark.github.io/shop/shoes.json')
       .then(res => {
         let copy = products;
         setProducts([...copy, ...res.data])
@@ -26,13 +26,14 @@ function App() {
     }
 }
 
+console.log(show)
 
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route path="/" element={<Main products={products} handleClick={handleClick} show={show}/>} />
-        <Route path="/products" element={<Main products={products}/>} />
+        <Route path="/products" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/detail/:id" element={<Detail products={products}/>}/>
         <Route path="/cart" element={<Cart />} />
         {/* <Route path="/event" element={<Event/>}> */}

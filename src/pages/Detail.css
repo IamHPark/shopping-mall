@@ -1,0 +1,9 @@
+.container {
+    margin: 5vh auto;
+}
+
+.product-detail {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}

@@ -2,3 +2,40 @@
     width: 60vw;
     margin: 5% auto;
 }
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity {
+    background-color: transparent;
+    border: 2px solid #ff9200;
+    color: #ff9200;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.quantity:hover {
+    background-color: #ff9200;
+    color: white;
+}
+
+.cart-btn {
+    padding: 1rem 2.5rem;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #555555;
+    margin: 0 30px;
+}
+
+.cart-btn:hover {
+    background-color: #555555;
+    color: white;
+    cursor: pointer;
+}
