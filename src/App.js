@@ -32,7 +32,7 @@ console.log(show)
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/products" element={<Main products={products} handleClick={handleClick} show={show}/>} />
+        <Route path="/" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/products" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/detail/:id" element={<Detail products={products}/>}/>
         <Route path="/cart" element={<Cart />} />

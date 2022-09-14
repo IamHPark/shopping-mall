@@ -8,8 +8,8 @@ export default function NavBar() {
     return (
     <Navbar variant="dark" collapseOnSelect className='nav-bar' expand="lg">
 
-        <Navbar.Brand href="/" className=''>
-            SHOE MARKET
+        <Navbar.Brand>
+            <Link to="/" className="nav-link logo">SHOES MARKET</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

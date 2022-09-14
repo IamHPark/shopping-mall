@@ -9,7 +9,7 @@ export default function Detail(props) {
     let product = props.products.find( x => x.id == id)
     console.log(product)
     const dispatch = useDispatch();
-    const navigate = use();
+    const navigate = useNavigate();
 
     return (
         <div className="container">
