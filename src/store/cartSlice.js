@@ -4,12 +4,15 @@ const cart = createSlice({
     name: 'cart',
     initialState: [],
     reducers: {
-        increase(state, id) {
-            for (let e of state) {
-                if (e.id == id.payload) {
-                    e.count += 1
-                }
-            }
+        increase(state, action) {
+            let id = state.findIndex( a => { return a.id == action.payload})
+            state[id].count++;
+
+            // for (let e of state) {
+            //     if (e.id == action.payload) {
+            //         e.count += 1
+            //     }
+            // }
         },
         decrease(state, action) {
             for (let e of state) {
