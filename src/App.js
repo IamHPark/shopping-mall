@@ -27,7 +27,8 @@ function App() {
 }
 
   useEffect(() => {
-    localStorage.setItem('viewed', JSON.stringify([]))
+    const storage = localStorage.getItem('viewed')
+    !storage && localStorage.setItem('viewed', JSON.stringify([]))
   },[])
 
   return (

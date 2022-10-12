@@ -16,7 +16,7 @@ export default function Main(props) {
                     )}
                 </Row>
             </Container>
-            {props.show && <button className="main-btn" onClick={props.handleClick}>More Products</button>}
+            {/* {props.show && <button className="main-btn" onClick={props.handleClick}>More Products</button>} */}
 
         </div>
     )

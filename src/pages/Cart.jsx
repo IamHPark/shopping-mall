@@ -11,10 +11,12 @@ export default function Cart(props) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const viewed = JSON.parse(localStorage.getItem('viewed'))
-    const viewedList = viewed && viewed.map( (item, i) =>
+    console.log(viewed)
+    console.log(props.products)
+    const viewedList = viewed && viewed.map( (id, i) =>
         <div key={i} className="viewed-item">
-            <p className="viewed-item-title">{props.products[parseInt(item)].title}</p>
-            <img src={process.env.PUBLIC_URL+`/img/shoes${props.products[parseInt(item)].id}.jpg`} alt="" width={"300px"} height={"100%"}/>
+            <p className="viewed-item-title">{props.products[parseInt(id)].title}</p>
+            <img src={process.env.PUBLIC_URL+`/img/shoes${props.products[parseInt(id)].id}.jpg`} alt="" width={"300px"} height={"100%"}/>
         </div>
     )
 
