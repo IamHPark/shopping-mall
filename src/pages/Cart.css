@@ -39,3 +39,26 @@
     color: white;
     cursor: pointer;
 }
+
+.viewed {
+    display: flex;
+    overflow: scroll;
+    max-width: 1200px;
+    position: relative;
+}
+
+.viewed-item {
+    position: relative;
+}
+
+.viewed-item-title {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.viewed-title {
+    margin: 10vh 0 30px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addItem } from "../store/cartSlice";
@@ -7,9 +7,18 @@ import './Detail.css'
 export default function Detail(props) {
     let {id} = useParams();
     let product = props.products.find( x => x.id == id)
-    console.log(product)
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        let viewed = JSON.parse(localStorage.getItem('viewed'))
+        if (viewed.findIndex( item => item === id) < 0 ) {
+            viewed.push(id)
+        }
+        localStorage.setItem('viewed', JSON.stringify(viewed))
+    }, [])
+
 
     return (
         <div className="container">

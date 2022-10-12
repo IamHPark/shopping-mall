@@ -5,8 +5,6 @@ import { Row, Container } from "react-bootstrap";
 
 export default function Main(props) {
 
-    console.log(props.product)
-    console.log(props.show)
 
     return (
         <div className="main">
@@ -19,6 +17,7 @@ export default function Main(props) {
                 </Row>
             </Container>
             {props.show && <button className="main-btn" onClick={props.handleClick}>More Products</button>}
+
         </div>
     )
 }

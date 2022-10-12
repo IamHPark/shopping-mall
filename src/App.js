@@ -4,7 +4,7 @@ import NavBar from './components/Nav';
 import Detail from './pages/Detail';
 import Main from './components/Main';
 import data from './data'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Cart from './pages/Cart';
 
@@ -26,7 +26,9 @@ function App() {
     }
 }
 
-console.log(show)
+  useEffect(() => {
+    localStorage.setItem('viewed', JSON.stringify([]))
+  },[])
 
   return (
     <div className="App">
@@ -35,7 +37,7 @@ console.log(show)
         <Route path="/" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/products" element={<Main products={products} handleClick={handleClick} show={show}/>} />
         <Route path="/detail/:id" element={<Detail products={products}/>}/>
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart products={products}/>} />
         {/* <Route path="/event" element={<Event/>}> */}
           {/* <Route path='one' element={<h3>This is Event One</h3>}/> */}
           {/* <Route path='two' element={<h3>This is Event Two</h3>}/> */}
