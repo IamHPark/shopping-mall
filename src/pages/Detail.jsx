@@ -13,9 +13,12 @@ export default function Detail(props) {
 
     useEffect(() => {
         let viewed = JSON.parse(localStorage.getItem('viewed'))
-        if (viewed.findIndex( item => item === id) < 0 ) {
-            viewed.push(id)
-        }
+        viewed.push(id)
+        viewed = new Set(viewed)
+        viewed = Array.from(viewed);
+        // if (viewed.findIndex( item => item === id) < 0 ) {
+        //     viewed.push(id)
+        // }
         localStorage.setItem('viewed', JSON.stringify(viewed))
     }, [])
 

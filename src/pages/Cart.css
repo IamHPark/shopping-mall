@@ -44,11 +44,24 @@
     display: flex;
     overflow: scroll;
     max-width: 1200px;
+    width: 100%;
     position: relative;
+}
+
+@media (max-width: 750px) {
+    .viewed {
+        display: block;
+        overflow: scroll;
+        width: 100%;
+        max-height: 500px;
+        position: relative;
+    }
 }
 
 .viewed-item {
     position: relative;
+    width: fit-content;
+    margin: auto;
 }
 
 .viewed-item-title {
